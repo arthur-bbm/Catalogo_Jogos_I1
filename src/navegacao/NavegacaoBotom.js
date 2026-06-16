@@ -3,13 +3,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TelaAdicao from "../telas/TelaAdicao";
 import TelaLista from "../telas/TelaLista";
 
-const tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator()
 
 export default function NavegacaoBotom() {
     return (
-        <TabNavigator>
+        <Tab.Navigator>
             <Tab.screen name='Adicao' component={TelaAdicao}/>
             <Tab.screen name='Lista' component={TelaLista}/>
-        </TabNavigator>
+        </Tab.Navigator>
     )
 }
