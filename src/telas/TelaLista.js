@@ -1,20 +1,17 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-export default function TelaLista({ navigation }) {
+export default function TelaLista({ route }) {
+  const { itemId, nome } = route.params || {}
+
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>Tela Inicial</Text>
+      <Text style={styles.texto}>Tela Lista</Text>
 
-      <Button
-        title="Ir para Adicionar"
-        onPress={() =>
-          navigation.navigate('Adicionar', {
-            itemId: 1,
-            nome: 'Juca',
-          })
-        }
-      />
+      <View style={styles.container}>
+        <Text>Item id - {itemId}</Text>
+        <Text>nome - {nome}</Text>
+      </View>
     </View>
   );
 }
