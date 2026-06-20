@@ -40,9 +40,9 @@ export default function TelaAdicao({ navigation }) {
       <Text style={styles.texto}>Tela Inicial</Text>
       <TextInput style={styles.input} placeholder='Nome' placeholderTextColor='#fff' value={nome} onChangeText={setNome}/>
       <TextInput style={styles.input} placeholder='Genero' placeholderTextColor='#fff' value={genero} onChangeText={setGenero}/>
-      <TextInput style={styles.input} placeholder='Ano de lancamento' placeholderTextColor='#fff' value={ano} onChangeText={setAno}/>
-      <TextInput style={styles.input} placeholder='Preco' placeholderTextColor='#fff' value={preco} onChangeText={setPreco}/>
-      <Button onPress={adicionarJogo} title='adicionar' color={'purple'}/>
+      <TextInput style={styles.input} placeholder='Ano de lancamento' placeholderTextColor='#fff' value={ano} onChangeText={setAno} keyboardType='numeric'/>
+      <TextInput style={styles.input} placeholder='Preco' placeholderTextColor='#fff' value={preco} onChangeText={setPreco} keyboardType='numeric'/>
+      <Button onPress={adicionarJogo} title='salvar' color={'purple'}/>
     </View>
   );
 }
