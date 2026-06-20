@@ -12,12 +12,16 @@ export default function TelaAdicao({ navigation }) {
 
   function adicionarJogo() {
     if (nome.trim() === '' || genero.trim() === '' || ano.trim() === '' || preco.trim() === '') {
+      setNome('')
+      setGenero('')
+      setAno('')
+      setPreco('')
       alert()
       return
     }
 
     const novoJogo = {
-      nome : nome, genero : genero, ano : ano, preco : preco
+       id : String(Date.now()), nome : nome, genero : genero, ano : ano, preco : preco
     }
 
     setJogos([...jogos,novoJogo])
@@ -25,6 +29,7 @@ export default function TelaAdicao({ navigation }) {
     setGenero('')
     setAno('')
     setPreco('')
+    console.log('Item adicionado')
   }
 
   return (

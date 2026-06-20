@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, FlatList } from 'react-native';
 
 export default function TelaLista({ route }) {
   const { itemId, nome } = route.params || {}
@@ -9,8 +9,12 @@ export default function TelaLista({ route }) {
       <Text style={styles.texto}>Tela Lista</Text>
 
       <View style={styles.container}>
-        <Text>Item id - {itemId}</Text>
-        <Text>nome - {nome}</Text>
+        <FlatList data={jogos} keyExtractor={item => item.id} renderItem={({ item }) => (
+          <View>
+            <Text>Jogo - {nome} | Genero - {genero}</Text>
+            <Text>Ano - {ano} | Preco - {preco}</Text>
+          </View>
+        )}/>
       </View>
     </View>
   );
