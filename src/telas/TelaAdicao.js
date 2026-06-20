@@ -32,7 +32,7 @@ export default function TelaAdicao({ navigation }) {
     setAno('')
     setPreco('')
 
-    console.log('Item adicionado')
+    console.log('Jogo adicionado')
   }
 
   return (
@@ -42,7 +42,7 @@ export default function TelaAdicao({ navigation }) {
       <TextInput style={styles.input} placeholder='Genero' placeholderTextColor='#fff' value={genero} onChangeText={setGenero}/>
       <TextInput style={styles.input} placeholder='Ano de lancamento' placeholderTextColor='#fff' value={ano} onChangeText={setAno}/>
       <TextInput style={styles.input} placeholder='Preco' placeholderTextColor='#fff' value={preco} onChangeText={setPreco}/>
-      <Button onPress={adicionarJogo} title='adicionar' color={'red'}/>
+      <Button onPress={adicionarJogo} title='adicionar' color={'purple'}/>
     </View>
   );
 }
@@ -67,5 +67,6 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 10,
     backgroundColor: '#121212',
+    color: 'white'
   }
 });
