@@ -1,10 +1,11 @@
-import { React, useState } from 'react';
+import React from 'react';
+import { useState, useContext  } from 'react';
 import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
 
+import { JogosContext } from '../navegacao/JogosContext';
+
 export default function TelaAdicao({ navigation }) {
-  const [jogos,setJogos] = useState([
-    { nome : 'destiny', genero  : 'acao', ano : 2017, preco : 0}
-  ])
+  const { jogos, setJogos } = useContext(JogosContext);
   const [nome,setNome] = useState('')
   const [genero,setGenero] = useState('')
   const [ano,setAno] = useState('')
@@ -25,21 +26,23 @@ export default function TelaAdicao({ navigation }) {
     }
 
     setJogos([...jogos,novoJogo])
+
     setNome('')
     setGenero('')
     setAno('')
     setPreco('')
+
     console.log('Item adicionado')
   }
 
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>Tela Inicial</Text>
-      <TextInput style={styles.input} placeholder='Nome' value={nome} onChangeText={setNome}/>
-      <TextInput style={styles.input} placeholder='Genero' value={genero} onChangeText={setGenero}/>
-      <TextInput style={styles.input} placeholder='Ano de lancamento' value={ano} onChangeText={setAno}/>
-      <TextInput style={styles.input} placeholder='Preco' value={preco} onChangeText={setPreco}/>
-      <Button onPress={adicionarJogo} title='adicionar'/>
+      <TextInput style={styles.input} placeholder='Nome' placeholderTextColor='#fff' value={nome} onChangeText={setNome}/>
+      <TextInput style={styles.input} placeholder='Genero' placeholderTextColor='#fff' value={genero} onChangeText={setGenero}/>
+      <TextInput style={styles.input} placeholder='Ano de lancamento' placeholderTextColor='#fff' value={ano} onChangeText={setAno}/>
+      <TextInput style={styles.input} placeholder='Preco' placeholderTextColor='#fff' value={preco} onChangeText={setPreco}/>
+      <Button onPress={adicionarJogo} title='adicionar' color={'red'}/>
     </View>
   );
 }
@@ -49,16 +52,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#2c2c2c',
   },
   texto: {
     fontSize: 20,
     marginBottom: 20,
+    color: 'white',
+    fontWeight: 'bold',
   },
   input: {
     borderWidth: 2,
-    borderColor: 'black',
+    borderColor: '#1a1a1a',
     borderRadius: 5,
     padding: 5,
     margin: 10,
+    backgroundColor: '#121212',
   }
 });

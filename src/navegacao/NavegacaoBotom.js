@@ -7,7 +7,7 @@ const Tab = createBottomTabNavigator()
 
 export default function NavegacaoBotom() {
     return (
-        <Tab.Navigator initialRouteName="Adicionar">
+        <Tab.Navigator initialRouteName="Adicionar" screenOptions={{headerShown: false}}>
             <Tab.Screen name='Adicionar' component={TelaAdicao}/>
             <Tab.Screen name='Lista' component={TelaLista}/>
         </Tab.Navigator>
