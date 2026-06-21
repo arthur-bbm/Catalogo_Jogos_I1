@@ -13,3 +13,5 @@ O usuário pode cadastrar jogos informando nome, genero, ano de lançamento e pr
 Na Aba "Adicionar", encontram-se inputs para os 4 atributos principais dos jogos: nome, genero, ano de lancamento e preco. Para catalogar um jogo, basta preencher todas as colunas e clicar no botao "salvar".
 
 Para visualisar os jogos cadastrados, se direcione para a aba "Lista". La voce podera encontrar todos os jogos cadastrados e seus respectivos atributos. Alem disso, tambem existe o botao "remover", responsavel por remover um item especifico da lista caso exista algum erro.
+
+Alem disso, caso queira entender um pouco sobre o percurso dos jogos digitais ao longo do tempo, a tela "Estatisticas" fornece ao usuario uma breve review sobre a historia dos jogos, comentando sobre sua importancia e seus impactos
