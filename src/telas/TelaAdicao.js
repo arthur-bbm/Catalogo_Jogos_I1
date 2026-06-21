@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useContext  } from 'react';
 import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
-
 import { JogosContext } from '../navegacao/JogosContext';
 
 export default function TelaAdicao({ navigation }) {

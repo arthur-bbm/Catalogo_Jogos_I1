@@ -1,7 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
 import { View, Text, Button, StyleSheet, FlatList } from 'react-native';
-
 import { JogosContext } from '../navegacao/JogosContext';
 
 export default function TelaLista({ navigation }) {
